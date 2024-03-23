@@ -1,0 +1,42 @@
+# Common OS/IDE generated files
+*.log
+*.tmp
+*.history
+*.DS_Store  # macOS
+
+# Build artifacts (adjust based on your project)
+node_modules/  # For Node.js projects
+dist/          # Common output directory
+out/           # Common output directory for compiled code (common for JetBrains IDEs)
+target/        # Another common output directory (common for JetBrains IDEs)
+
+# Temporary build files
+.tmpdockerfile  # Specific to Docker
+
+# Cached container data
+**/.dockerenv  # Specific to Docker Compose
+
+# IDE specific files (adjust based on your IDE)
+.vscode/settings.json  # VS Code
+!*.code-workspace        # Optional, include workspace files if needed (VS Code)
+.idea/                   # JetBrains IDEs
+*.iml                    # JetBrains IDEs
+.idea/*.sfd              # Security & Facade Diagram data (IntelliJ IDEA)
+.idea/dockerCompose.xml  # Docker Compose configuration for IntelliJ IDEA (example)
+
+# Exclude personal access tokens (adjust based on your IDE)
+.vscode/*.secret  # VS Code (example)
+*.idea/*.sfd      # Security & Facade Diagram data (IntelliJ IDEA)
+
+# Node specific files
+node_modules/
+
+# Caching directories (optional)
+.npm  # Optional npm cache
+.eslintcache  # Optional ESLint cache
+
+# Dockerfile (make sure to track it)
+!Dockerfile
+
+# Build context (adjust based on your project) - Recommend creating a separate .dockerignore file
+# .dockerignore
