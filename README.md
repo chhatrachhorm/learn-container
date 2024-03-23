@@ -48,7 +48,7 @@ docker ps -a
 docker logs <container_id>
 ```
 
-## how to build docker container from docker file
+## How to build docker container from docker file
 ```bash
 # build one time of the image of that tag
 docker build --tag dockerfile-demo-container:1.0 ./dockerfile-demo
@@ -61,5 +61,5 @@ docker images
 docker run --name dockerfile_demo_app --detach --publish 3000:3000 dockerfile-demo-container:1.0
 ```
 
-## basic dev-op workflow
+## Basic dev-op workflow
 ![image](https://github.com/chhatrachhorm/learn-docker/assets/28259921/f2ad7d49-dbba-4378-9218-d63ac2379956)
