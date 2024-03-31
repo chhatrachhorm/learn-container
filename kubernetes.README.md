@@ -21,4 +21,42 @@ minikube start --driver docker
 
 # check the status
 minikube status
+
+# get all info
+kubectl get all
+
+# Start with demo app
+# create config and secret
+kubectl apply -f ./k8s-demo/mongo-config.yml
+kubectl apply -f ./k8s-demo/mongo-secret.yml
+
+# create db
+kubectl apply -f ./k8s-demo/mongo.yml
+
+# deploy webapp
+kubectl apply -f ./k8s-demo/webapp.yml
+
+# get config map
+kubectl get configmap
+# get secret
+kubectl get secret
+
+# get node
+kubectl get node
+# get pod
+kubectl get pod
+# see pod detail
+kubectl describe pod <pod_name>
+
+# see log of pods
+kubectl logs <pod_name>
+# stream the logs
+kubectl logs <pod_name> -f
 ```
+### Troubleshoot Minikube Docker on Windows
+It is possible that you will not be able to access external service (webapp from above config) from minikube IP due to network configuration in minikube.
+There are many solution to test this, but the easiest way is to use minikube tunnel to the service
+```bash
+minikube service <service name like webapp-service>
+```
+Reference: https://stackoverflow.com/questions/71536310/unable-to-access-minikube-ip-address
