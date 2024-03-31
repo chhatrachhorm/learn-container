@@ -10,5 +10,15 @@ All credits to this tutorial on youtube: [https://youtu.be/s_o8dwzRlu4?si=VPK2q9
 ![image](https://github.com/chhatrachhorm/learn-container/assets/28259921/549bed7d-e87f-46cf-84f2-0968230566ce)
 
 
-## Setup
-For windows, download the Docker Desktop and install it.
+## Setup MiniKube for Local Experiments
+Download the MiniKube from [here](https://minikube.sigs.k8s.io/docs/start/) for local setup.
+MiniKube needs a containerized tool to run on. 
+On Windows, install docker and use docker as the driver for MiniKube to run.
+### Basic Commands
+```bash
+# start minikube with docker as driver
+minikube start --driver docker
+
+# check the status
+minikube status
+```
