@@ -52,6 +52,9 @@ kubectl describe pod <pod_name>
 kubectl logs <pod_name>
 # stream the logs
 kubectl logs <pod_name> -f
+
+# to delete cluster in minikubes
+minikube delete --all
 ```
 ### Troubleshoot Minikube Docker on Windows
 It is possible that you will not be able to access external service (webapp from above config) from minikube IP due to network configuration in minikube.
